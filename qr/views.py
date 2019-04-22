@@ -1,5 +1,6 @@
 from django.shortcuts import render
 import pyqrcode
+import os
 
 
 def index(request):
@@ -11,7 +12,9 @@ def index(request):
         data = request.GET.get('search_box', None)
         if data:
             a = pyqrcode.create(data)
-            a.png('/home/naveen/projects/QRCodeGenerator/static_proj/img/qr.png',scale=7)
+            a.png(os.path.abspath(BASE_DIR, 'staticproj/img'))
+            print(os.path.abspath(BASE_DIR, 'staticproj/img'))
+
 
             # print(a.terminal(quiet_zone=0))
             return render(request, 'qr/result.html')
