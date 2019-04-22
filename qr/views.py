@@ -1,6 +1,7 @@
 from django.shortcuts import render
 import pyqrcode
 import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 def index(request):
