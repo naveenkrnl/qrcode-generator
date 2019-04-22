@@ -1,7 +1,10 @@
 {% load static %}
 <html>
-    <body style="background-color:lightyellow;">
-        <h3 style="color:darkgreen; text-align:center; font-size:50px;">Your Generated QR Code is:</h3>
-            <img src="{% static 'img/qr.png' %}" style=" display: block; margin-left: auto; margin-right: auto;">
-        </body>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+	</head>
+    <body style="background-color:#ebebeb;">
+        <h3 style="font-family: 'Caveat', cursive; color:#60a0ff; text-align:center; font-size:50px;">Your Generated QR Code is:</h3>
+        <img src="{% static 'img/qr.png' %}" style=" display: block; margin-left: auto; margin-right: auto;">
+    </body>
     </html>
