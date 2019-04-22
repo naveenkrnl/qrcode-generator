@@ -13,8 +13,7 @@ def index(request):
         data = request.GET.get('search_box', None)
         if data:
             a = pyqrcode.create(data)
-            a.png(os.path.abspath(BASE_DIR, 'staticproj/img'))
-            print(os.path.abspath(BASE_DIR, 'staticproj/img'))
+            a.png(os.path.join(BASE_DIR, 'qrcode/staticproj/img'))
 
 
             # print(a.terminal(quiet_zone=0))
